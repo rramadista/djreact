@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Container, Divider } from 'semantic-ui-react'
-import ListExampleDivided from './List';
 import StatisticExampleEvenlyDivided from './Statistic';
 import HeaderExampleSettingsIcon from './Header';
 import BreadcrumbExampleStandard from './Breadcrumb';
@@ -32,8 +31,6 @@ export default class ContainerExampleContainer extends Component {
                 </p>
 
                 <StatisticExampleEvenlyDivided/>
-
-                <ListExampleDivided/>
 
                 <MessageExampleIcon/>
         

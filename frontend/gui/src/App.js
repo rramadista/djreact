@@ -3,9 +3,72 @@ import { } from 'semantic-ui-react';
 
 import SegmentExamplePlaceholderGrid from './components/Segment';
 import ContainerExampleContainer from './components/Container';
+import Banks from './components/Banks';
+import AddBank from './components/AddBank';
 
 
 class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            bank: [
+                {
+                    title: "Bank Mandiri",
+                    category: "Stated Owned Bank"
+                },
+                {
+                    title: "BJB",
+                    category: "Regional Bank"
+                },
+                {
+                    title: "BCA",
+                    category: "Private Forex Bank"
+                },
+                {
+                    title: "Bank Mantap",
+                    category: "Private Non Forex Bank"
+                },
+                {
+                    title: "Bank BTPN",
+                    category: "Joint Venture Bank"
+                },
+                {
+                    title: "Citibank",
+                    category: "Foreign Bank"
+                }
+            ]
+        }
+    }
+
+    componentWillMount(){
+        this.setState({banks: [
+            {
+                title: "Bank Mandiri",
+                category: "Stated Owned Bank"
+            },
+            {
+                title: "BJB",
+                category: "Regional Bank"
+            },
+            {
+                title: "BCA",
+                category: "Private Forex Bank"
+            },
+            {
+                title: "Bank Mantap",
+                category: "Private Non Forex Bank"
+            },
+            {
+                title: "Bank BTPN",
+                category: "Joint Venture Bank"
+            },
+            {
+                title: "Citibank",
+                category: "Foreign Bank"
+            }
+        ]});
+    }
+
     render() {
         return ( 
             <div className = "App" >
@@ -13,6 +76,10 @@ class App extends Component {
                 <SegmentExamplePlaceholderGrid/>
 
                 <ContainerExampleContainer/>
+
+                <AddBank/>
+
+                <Banks banks={this.state.bank}/>
 
             </div>
         );
